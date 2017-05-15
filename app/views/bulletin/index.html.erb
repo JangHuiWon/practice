@@ -1,0 +1,16 @@
+<h1>bulletin index page</h1>
+<div>
+    <% @posts.each do |p| %>
+    <div>
+        <a href = "/show/<%=p.id%>">
+            <%= p.title %>
+        </a>
+        <a href = "delete/<%= p.id %>">
+            [삭제]
+        </a>
+    </div>
+    <% end %>
+</div>
+<a href = "#">
+    [새글]
+</a>
